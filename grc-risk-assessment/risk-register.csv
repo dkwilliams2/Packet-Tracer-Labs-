@@ -1,0 +1,13 @@
+ID,Risk,Assets,Likelihood,Impact,Score,Rating,Treatment,Owner,Target Date,NIST CSF 2.0
+R-01,SSH open to the entire Internet on both routers,A-01; A-03,5,4,20,High,Mitigate,IT Admin,30 days,PR.AA-05; PR.IR-01
+R-02,Single shared admin account and password on all devices,A-01 to A-04; D-02,4,4,16,High,Mitigate,IT Admin,30 days,PR.AA-01; PR.AA-03; PR.AA-05
+R-03,No off-device configuration backups,D-01,4,4,16,High,Mitigate,IT Admin,30 days,PR.DS-11; RC.RP-03
+R-04,No centralized logging,A-01 to A-04,4,4,16,High,Mitigate,IT Admin,30 days,PR.PS-04; DE.CM-01
+R-05,No change control for device configurations,A-01 to A-04,3,4,12,Medium,Mitigate,IT Admin,90 days,PR.PS-01; GV.PO-01
+R-06,Switch management on user VLAN 1,A-02; A-04,3,3,9,Medium,Mitigate,IT Admin,90 days,PR.IR-01; PR.AA-05
+R-07,No NTP time synchronization,A-01 to A-04,4,2,8,Medium,Mitigate,IT Admin,90 days,PR.PS-04; DE.AE-03
+R-08,Single router and Internet link per site,A-01; A-03,2,4,8,Medium,Accept,Operations Manager,Review yearly,PR.IR-03
+R-09,DHCP-assigned WAN addresses can change,A-01; A-03,3,3,9,Medium,Mitigate,IT Admin,90 days,ID.AM-03; PR.IR-01
+R-10,No incident response or recovery plan,All,3,4,12,Medium,Mitigate,Operations Manager,90 days,RS.MA-01; RC.RP-01
+R-11,No legal login banner,A-01 to A-04,2,2,4,Low,Mitigate,IT Admin,When possible,GV.PO-01
+R-12,No documented network inventory or diagram,All,3,2,6,Low,Mitigate (done),IT Admin,Complete,ID.AM-01; ID.AM-03

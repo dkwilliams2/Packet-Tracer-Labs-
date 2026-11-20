@@ -58,3 +58,9 @@ Router# show ip route
 |-----|--------|
 | [Switch VLANs](switch-vlans/) | VLANs, access ports, 802.1Q trunking |
 | [SSH Remote Management](ssh-remote-management/) | SSH v2, RSA keys, local login, switch management SVI, default gateway |
+
+## Projects
+
+| Project | Topics |
+|---------|--------|
+| [GRC Risk Assessment](grc-risk-assessment/) | Risk register, NIST CSF 2.0 and SP 800-53 control mapping, remediation plan, executive summary |
