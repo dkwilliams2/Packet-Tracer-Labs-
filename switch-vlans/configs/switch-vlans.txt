@@ -1,0 +1,33 @@
+! Same configuration on SW1 and SW2 (change hostname)
+enable
+configure terminal
+hostname SW1
+!
+vlan 10
+ name MARKETING
+vlan 20
+ name ACCOUNTING
+!
+interface e0/0
+ switchport mode access
+ switchport access vlan 10
+!
+interface e0/1
+ switchport mode access
+ switchport access vlan 20
+!
+interface e0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+end
+copy running-config startup-config
+!
+! Verification
+show vlan brief
+show interfaces e0/2 trunk
+show interfaces e0/2 switchport
+
+! VPC test hosts
+! SW1 side: VPC1  ip 192.168.1.1/24  (VLAN 10)   VPC2  ip 192.168.2.1/24  (VLAN 20)
+! SW2 side: host  ip 192.168.1.2/24  (VLAN 10)   host  ip 192.168.2.2/24  (VLAN 20)

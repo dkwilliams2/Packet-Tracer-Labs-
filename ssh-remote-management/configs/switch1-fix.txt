@@ -1,0 +1,10 @@
+! Switch1 management interface fix
+enable
+configure terminal
+interface vlan 1
+ ip address 10.1.1.2 255.255.255.0
+ no shutdown
+exit
+ip default-gateway 10.1.1.1
+end
+copy running-config startup-config

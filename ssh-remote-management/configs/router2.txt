@@ -1,0 +1,30 @@
+! Router2 configuration (Site 2)
+enable
+configure terminal
+hostname Router2
+ip domain name site2.lab
+!
+interface E0/0
+ description WAN Link to Internet
+ ip address dhcp
+ no shutdown
+!
+interface Ethernet0/1
+ description LAN connection to Switch2
+ ip address 10.2.2.1 255.255.255.0
+ no shutdown
+!
+username admin privilege 15 secret <password>
+!
+line console 0
+ logging synchronous
+!
+line vty 0 4
+ logging synchronous
+ transport input ssh
+ login local
+!
+crypto key generate rsa modulus 4096
+ip ssh version 2
+end
+copy running-config startup-config

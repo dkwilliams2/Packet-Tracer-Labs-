@@ -36,8 +36,8 @@ Router# show ip route
 
 | From | To | Result | Why |
 |---|---|---|---|
-| PC2 | PC0 (192.168.2.100) | ✅ 4/4 replies, TTL=127 | The router has an interface on both subnets. TTL dropped from 128 to 127, showing the packet crossed one router. |
-| PC2 | PC1 (192.168.3.100) | ❌ 100% loss | PC1 has a 192.168.3.x address but is plugged into Switch0, which is on the 192.168.2.x segment. The router sends 192.168.3.x traffic out Fa1/0 toward Switch1, so it never reaches PC1. |
+| PC2 | PC0 (192.168.2.100) | 4/4 replies, TTL=127 | The router has an interface on both subnets. TTL dropped from 128 to 127, showing the packet crossed one router. |
+| PC2 | PC1 (192.168.3.100) | 100% loss | PC1 has a 192.168.3.x address but is plugged into Switch0, which is on the 192.168.2.x segment. The router sends 192.168.3.x traffic out Fa1/0 toward Switch1, so it never reaches PC1. |
 
 **Fix:** Move PC1 to Switch1, or give it a 192.168.2.x address with 192.168.2.1 as its gateway.
 
@@ -51,3 +51,10 @@ Router# show ip route
 ![Screenshot 2](Screenshot_16-11-2026_173818_labconnection.net.jpeg)
 
 ![Screenshot 3](Screenshot_16-11-2026_175258_labconnection.net.jpeg)
+
+## More Labs
+
+| Lab | Topics |
+|-----|--------|
+| [Switch VLANs](switch-vlans/) | VLANs, access ports, 802.1Q trunking |
+| [SSH Remote Management](ssh-remote-management/) | SSH v2, RSA keys, local login, switch management SVI, default gateway |
